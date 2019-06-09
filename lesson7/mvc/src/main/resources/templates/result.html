@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Mvc Pattern example</title>
+</head>
+<body>
+<h3>Mvc Pattern example</h3>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Author</th>
+        <th>Description</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="workorder : ${workorders}" th:attr="order_index=${workorder.id}">
+        <td th:text="${workorder.id}"/>
+        <td th:text="${workorder.author}"/>
+        <td th:text="${workorder.description}"/>
+        <td th:text="${workorder.creationDate}"/>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>Mvc Pattern example</title>
+</head>
+<body>
+<h3>Mvc Pattern example</h3>
+<form th:action="@{/}" th:object="${workorder}" method="post" action="#">
+    <table>
+        <tr>
+            <td>Author:</td>
+            <td><input type="text" th:field="*{author}"/></td>
+        </tr>
+        <tr>
+            <td>Task:</td>
+            <td><input type="text" th:field="*{description}"/></td>
+        </tr>
+        <tr>
+        <td>Date:</td>
+        <td><input type="text" th:field="*{creationDate}"/></td>
+        </tr>
+        <tr>
+            <td><button type="submit">Create workorder</button></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
